@@ -18,8 +18,13 @@ const App = () => {
     setErrors(null);
 
     try {
-      const response = await fetch(`https://www.omdbapi.com/?apikey=45f0782a&s=${search}`);
+      const apikey = process.env.REACT_APP_OMDB_API_KEY;
+      const response = await fetch(`https://www.omdbapi.com/?apikey=${apikey}&s=${search}`);
       const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.Error || 'Something went wrong!');
+      }
 
       if (data.Response === 'True') {
         setMovies(data.Search);
@@ -28,7 +33,7 @@ const App = () => {
         setErrors('No movies found');
       }
     } catch (error) {
-      setErrors('An error occurred while fetching data');
+      setErrors(error.message || 'An error occurred while fetching data');
     } finally {
       setLoading(false);
     }
