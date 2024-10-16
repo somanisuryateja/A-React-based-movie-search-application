@@ -5,6 +5,9 @@ Here’s the complete **README.md** for your React-based movie search applicatio
 
 This project is a movie search app built using React.js. It allows users to search movies via the OMDb API and display relevant details such as movie titles and posters.
 
+## Live Demo
+[movies.suryadeals.com](https://movies.suryadeals.com)
+
 ## Features
 - Search movies by title.
 - Dynamic movie poster and title display.
