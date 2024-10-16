@@ -19,7 +19,9 @@ const App = () => {
 
     try {
       const apikey = process.env.REACT_APP_OMDB_API_KEY;
-      const response = await fetch(`https://www.omdbapi.com/?apikey=${apikey}&s=${search}`);
+      const url = `https://www.omdbapi.com/?apikey=${apikey}&s=${search}`;
+      console.log(url);
+      const response = await fetch(url);
       const data = await response.json();
 
       if (!response.ok) {
