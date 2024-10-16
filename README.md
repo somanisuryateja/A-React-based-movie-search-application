@@ -1,22 +1,63 @@
+Here’s the complete **README.md** for your React-based movie search application:
+
+```markdown
 # React Movie Search Application
 
-This is a movie search application built with React.js. It allows users to search for movies using the [OMDb API](https://www.omdbapi.com/) and displays the search results dynamically. Users can enter a movie name in the search bar, and the app will return a list of movies with their title, poster, and IMDb ID.
+This project is a movie search app built using React.js. It allows users to search movies via the OMDb API and display relevant details such as movie titles and posters.
 
 ## Features
-- Search movies by title
-- Display movie details such as poster and title
-- Exclude movies without a poster
-- Responsive design using CSS
+- Search movies by title.
+- Dynamic movie poster and title display.
+- Error handling for no results or missing images.
+- Responsive design for various screen sizes.
 
-## Getting Started
+## Technologies Used
+- **React.js** for the UI.
+- **CSS** for styling.
+- **OMDb API** for fetching movie data.
 
-### Prerequisites
-- Node.js and npm installed on your local machine
-- OMDb API key (You can get one from [OMDb](https://www.omdbapi.com/apikey.aspx))
+## Prerequisites
+Make sure you have:
+- **Node.js** installed on your machine.
+- An **OMDb API key** (available [here](https://www.omdbapi.com/apikey.aspx)).
 
-### Installation
+## Installation and Setup
 
-1. Clone the repository:
+1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/A-React-based-movie-search-application.git
+   git clone https://github.com/somanisuryateja/A-React-based-movie-search-application.git
+   ```
+
+2. **Navigate to the project directory**:
+   ```bash
    cd A-React-based-movie-search-application
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+4. **Set up your API Key**:
+   - Create a `.env` file in the root of your project:
+     ```bash
+     REACT_APP_OMDB_API_KEY=your_api_key
+     ```
+
+5. **Run the application**:
+   ```bash
+   npm start
+   ```
+   Visit `http://localhost:3000` to view your app.
+
+## Folder Structure
+```bash
+├── public/
+├── src/
+│   ├── App.jsx          # Main React component
+│   ├── App.css          # Styling file
+│   └── index.js         # Entry point for the app
+├── .gitignore
+├── package.json
+└── README.md            # This file
+```
